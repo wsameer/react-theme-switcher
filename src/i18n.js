@@ -37,7 +37,7 @@ const i18nOptions = {
   interpolation: {
     escapeValue: false
   }
-}
+};
 
 i18n
   .use(initReactI18next)
