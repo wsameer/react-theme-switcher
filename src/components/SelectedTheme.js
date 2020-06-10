@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function SelectedTheme({ isDark }) {
+function SelectedTheme({ isDark, t }) {
+
   return (
     <p style={{ letterSpacing: "1px", marginTop: "1em" }}>
-      Selected theme: {isDark ? 'Dark' : 'Light'}
+      {t('Selected theme')}: {isDark ? t('Dark') : t('Light')}
     </p>
   )
 }
