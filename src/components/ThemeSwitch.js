@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from "../ThemeContextProvider";
+import { useTheme } from "../providers/ThemeContextProvider";
 
 const ThemeSwitch = () => {
   const themeState = useTheme();

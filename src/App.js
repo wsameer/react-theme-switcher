@@ -1,8 +1,8 @@
 import React from 'react';
-import { useTheme } from "./ThemeContextProvider";
+import { useTheme } from "./providers/ThemeContextProvider";
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/shared/Header';
+import Footer from './components/shared/Footer';
 import Main from './components/Main';
 
 function App() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { ThemeContextProvider } from "./ThemeContextProvider";
+import { ThemeContextProvider } from "./providers/ThemeContextProvider";
 
 ReactDOM.render(
   <ThemeContextProvider>
