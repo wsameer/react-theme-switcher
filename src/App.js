@@ -12,9 +12,9 @@ function App() {
   const [selectedLang, setSelectedLang] = useState('');
 
   const onLangChange = (event) => {
-    console.log(`language changed to ${event.target.value}`);
     const language = event.target.value;
     setSelectedLang(language);
+    localStorage.setItem("language", language)
     i18n.changeLanguage(language);
   };
 

@@ -1,59 +1,46 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
+import enTranslations from './locale/en.json';
+import jpTranslations from './locale/jp.json';
+import frTranslations from './locale/fr.json';
+import esTranslations from './locale/es.json';
+
 const resources = {
   en: {
-    translations: {
-      "Selected theme": "Selected theme",
-      "Dark": "Dark",
-      "Light": "Light",
-      "Developed by": "Developed by"
-    }
+    translations: enTranslations
   },
   jp: {
-    translations: {
-      "Selected theme": "選択したテーマ",
-      "Dark": "闇",
-      "Light": "光",
-      "Developed by": "によって開発された"
-    }
+    translations: jpTranslations
   },
   es: {
-    translations: {
-      "Selected theme": "Tema seleccionado",
-      "Dark": "Oscuro",
-      "Light": "Ligero",
-      "Developed by": "Desarrollado por"
-    }
+    translations: frTranslations
   },
   fr: {
-    translations: {
-      "Selected theme": "Thème sélectionné",
-      "Dark": "Sombre",
-      "Light": "Lumière",
-      "Developed by": "Faite par"
-    }
+    translations: esTranslations
   }
 };
 
+const storedLanguage = localStorage.getItem("language") || navigator.language.split('-')[0];
+
+const i18nOptions = {
+  resources,
+  lng: storedLanguage,
+
+  ns: 'translations',
+  defaultNS: 'translations',
+
+  fallbackLng: 'en',
+
+  keyseparator: false,
+
+  interpolation: {
+    escapeValue: false
+  }
+}
 
 i18n
   .use(initReactI18next)
-  .init({
-    resources,
-    lng: 'en',
-
-    ns: 'translations',
-    defaultNS: 'translations',
-
-    fallbackLng: 'en',
-    debug: true,
-
-    keyseparator: false,
-
-    interpolation: {
-      escapeValue: false
-    }
-  });
+  .init(i18nOptions);
 
 export default i18n;
