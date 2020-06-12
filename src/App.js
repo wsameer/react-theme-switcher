@@ -31,7 +31,7 @@ function App() {
         t={t}
       />
       <Main t={t} />
-      {/* <Footer isDark={themeState.dark} /> */}
+      <Footer isDark={themeState.dark} />
     </div>
   );
 }
