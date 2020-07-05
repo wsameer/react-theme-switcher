@@ -1,5 +1,5 @@
 # react-theme-switcher
-A dark-light theme switcher for React applications
+A simple theme switcher plugin for your React applications. Extremely easy to use and customize.
 
 ![React Theme Switch](public/react-theme-switch.gif)
 
