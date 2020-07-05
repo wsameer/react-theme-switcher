@@ -1,6 +1,9 @@
 # react-theme-switcher
 A dark-light theme switcher for React applications
 
+![](public/react-theme-switch.gif)
+
+## Bonus Feature:
 Internationalization provides following features:
 - detect the user language
 - load the translations
